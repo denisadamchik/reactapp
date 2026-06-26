@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+# React + TypeScript Study Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains a React application built with TypeScript, following the step-by-step implementation described in **Chapters 20 & 21** of [Essential TypeScript (3rd Edition)](https://apress.com "Essential TypeScript by Adam Freeman") by Adam Freeman.
 
-## Available Scripts
+The purpose of this project is to demonstrate how TypeScript adds type safety, robustness, and better developer experience to a React ecosystem, explicitly managing component states, props, and data stores.
 
-In the project directory, you can run:
+## 🚀 Key Features Explored
 
-### `npm start`
+- **TSX Integration:** Defining functional and class-based React components using TypeScript `.tsx` syntax.
+- **Type-Safe Props & State:** Explicitly typing component properties and local states to eliminate runtime errors.
+- **Structured Data Store:** Building a centralized data store to handle local data states and seamlessly interact with external HTTP APIs.
+- **Advanced Component Communication:** Managing child-to-parent communications through strongly-typed callbacks.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 📂 Project Structure Overview
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Based on the book's architecture, the application is organized around the core separation of data models and UI rendering:
 
-### `npm test`
+```text
+src/
+├── models/         # TypeScript data structures and entities (Product, Order, etc.)
+├── data/           # Data store implementations, HTTP API request handlers, and types
+├── components/     # React components (.tsx files) with strictly typed props and states
+├── App.tsx         # Root application component orchestrating the application flow
+└── index.tsx       # Application entry point
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tech Stack & Prerequisites
 
-### `npm run build`
+Before running this application, make sure you have the following installed:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Node.js](https://nodejs.org) (v16.x or higher recommended)
+- [npm](https://npmjs.com) or [yarn](https://yarnpkg.com)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ⚡ Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Follow these steps to set up and run the application locally:
 
-### `npm run eject`
+### 1. Clone the Repository
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+git clone https://github.com
+cd reactapp
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Install Dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Install all package requirements, including type definitions (`@types/react`, `@types/react-dom`, etc.):
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+npm install
+```
 
-## Learn More
+### 3. Run the Development Server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Launch the React development server:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
+## 📝 Learning Highlights from Chapters 20 & 21
+
+1. **Chapter 20 (Creating a React App):** Focuses on configuring the TypeScript compiler (`tsconfig.json`) for React development, setting up the basic data model, and creating core UI elements using typed components.
+2. **Chapter 21 (Creating a React App, Part 2):** Covers expanding the data store functionality, managing web services via asynchronous HTTP requests, implementing CRUD operations, and finalizing the layout flow.
+
+---
+
+_This repository is maintained by [denisadamchik](/denisadamchik) for self-study and reference purposes._
