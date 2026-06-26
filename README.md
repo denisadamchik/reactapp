@@ -1,39 +1,18 @@
 # React + TypeScript Study Application
 
-This repository contains a React application built with TypeScript, following the step-by-step implementation described in **Chapters 20 & 21** of [Essential TypeScript (3rd Edition)](https://apress.com "Essential TypeScript by Adam Freeman") by Adam Freeman.
-
-The purpose of this project is to demonstrate how TypeScript adds type safety, robustness, and better developer experience to a React ecosystem, explicitly managing component states, props, and data stores.
-
-## 🚀 Key Features Explored
-
-- **TSX Integration:** Defining functional and class-based React components using TypeScript `.tsx` syntax.
-- **Type-Safe Props & State:** Explicitly typing component properties and local states to eliminate runtime errors.
-- **Structured Data Store:** Building a centralized data store to handle local data states and seamlessly interact with external HTTP APIs.
-- **Advanced Component Communication:** Managing child-to-parent communications through strongly-typed callbacks.
-
-## 📂 Project Structure Overview
-
-Based on the book's architecture, the application is organized around the core separation of data models and UI rendering:
-
-```text
-src/
-├── models/         # TypeScript data structures and entities (Product, Order, etc.)
-├── data/           # Data store implementations, HTTP API request handlers, and types
-├── components/     # React components (.tsx files) with strictly typed props and states
-├── App.tsx         # Root application component orchestrating the application flow
-└── index.tsx       # Application entry point
-```
+This repository contains a React application built with TypeScript, following the step-by-step implementation described in **Chapters 20 & 21** of Essential TypeScript (3rd Edition) by Adam Freeman.
 
 ## 🛠️ Tech Stack & Prerequisites
 
 Before running this application, make sure you have the following installed:
 
 - [Node.js](https://nodejs.org) (v16.x or higher recommended)
-- [npm](https://npmjs.com) or [yarn](https://yarnpkg.com)
+- [npm](https://npmjs.com)
+- [Docker Engine](https://docker.com) (Optional, if you wish to containerize the app)
 
 ## ⚡ Getting Started
 
-Follow these steps to set up and run the application locally:
+Follow these steps to set up, build, and run the application locally:
 
 ### 1. Clone the Repository
 
@@ -44,26 +23,58 @@ cd reactapp
 
 ### 2. Install Dependencies
 
-Install all package requirements, including type definitions (`@types/react`, `@types/react-dom`, etc.):
+Install all required packages, including TypeScript definitions and project dependencies:
 
 ```bash
 npm install
 ```
 
-### 3. Run the Development Server
+### 3. Build the React Application
 
-Launch the React development server:
+Compile the TypeScript and React source code into optimized production assets:
 
 ```bash
-npm start
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+### 4. Start the Application Server
 
-## 📝 Learning Highlights from Chapters 20 & 21
+Run the localized Node.js backend server to serve the built static application files and handle data APIs:
 
-1. **Chapter 20 (Creating a React App):** Focuses on configuring the TypeScript compiler (`tsconfig.json`) for React development, setting up the basic data model, and creating core UI elements using typed components.
-2. **Chapter 21 (Creating a React App, Part 2):** Covers expanding the data store functionality, managing web services via asynchronous HTTP requests, implementing CRUD operations, and finalizing the layout flow.
+```bash
+node server.js
+```
+
+Once the server starts successfully, open your browser and navigate to:
+👉 **[http://localhost:4002](http://localhost:4002)**
+
+---
+
+## 🐳 Running with Docker
+
+If you want to containerize the build and isolate the environment, use the included Dockerfile configuration.
+
+### Build the Docker Image
+
+```bash
+docker build . -t reactapp
+```
+
+### Run the Container
+
+Map the required server port (`4002`) and start the application container:
+
+```bash
+docker run -p 4002:4002 reactapp
+```
+
+Once started, the application will be accessible at `http://localhost:4002`.
+
+---
+
+## 📚 Reference material
+
+- **Book**: _Essential TypeScript_ by Adam Freeman (Manning Publications)
 
 ---
 
