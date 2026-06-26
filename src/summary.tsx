@@ -3,6 +3,7 @@ import { NavLink, useParams } from "react-router-dom";
 
 export const Summary: FunctionComponent = () => {
   const { id } = useParams();
+
   return (
     <div className="m-2 text-center">
       <h2>Thanks!</h2>
