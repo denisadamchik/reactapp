@@ -2,7 +2,7 @@
 
 This repository contains a React application built with TypeScript, following the step-by-step implementation described in **Chapters 20 & 21** of Essential TypeScript (3rd Edition) by Adam Freeman.
 
-## 🛠️ Tech Stack & Prerequisites
+## Tech Stack & Prerequisites
 
 Before running this application, make sure you have the following installed:
 
@@ -10,7 +10,7 @@ Before running this application, make sure you have the following installed:
 - [npm](https://npmjs.com)
 - [Docker Engine](https://docker.com) (Optional, if you wish to containerize the app)
 
-## ⚡ Getting Started
+## Getting Started
 
 Follow these steps to set up, build, and run the application locally:
 
@@ -46,11 +46,11 @@ node server.js
 ```
 
 Once the server starts successfully, open your browser and navigate to:
-👉 **[http://localhost:4002](http://localhost:4002)**
+**[http://localhost:4002](http://localhost:4002)**
 
 ---
 
-## 🐳 Running with Docker
+## Running with Docker
 
 If you want to containerize the build and isolate the environment, use the included Dockerfile configuration.
 
@@ -72,7 +72,7 @@ Once started, the application will be accessible at `http://localhost:4002`.
 
 ---
 
-## 📚 Reference material
+## Reference Material
 
 - **Book**: _Essential TypeScript_ by Adam Freeman (Manning Publications)
 
